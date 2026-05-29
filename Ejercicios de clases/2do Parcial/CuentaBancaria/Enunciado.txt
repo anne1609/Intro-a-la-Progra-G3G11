@@ -1,3 +1,0 @@
-Simular manejar varias cuentas bancarias.
-El sistema debe permitir:
- Trabajar con múltiples cuentas bancarias y realizar operaciones sobre una cuenta seleccionada (retirar dinero, depositar dinero).
