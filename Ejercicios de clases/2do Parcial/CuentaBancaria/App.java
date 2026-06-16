@@ -14,9 +14,11 @@ public class App
         String tipoCuenta= sc.nextLine();
         if(tipoCuenta.equals("Ahorro")){   
           CajaDeAhorro ahorro= new CajaDeAhorro(titular,saldo,4);
+          banco.agregarCuenta(ahorro);
           System.out.println("Cuenta de ahorro creada con exito ");
         }else if(tipoCuenta.equals("Corriente")){
            CuentaCorriente corriente= new CuentaCorriente(titular,saldo,50);
+           banco.agregarCuenta(corriente);
            System.out.println("Cuenta corriente creada con exito ");
         }
     }
