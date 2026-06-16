@@ -42,4 +42,26 @@ public class Banco
           System.out.println("No existe la cuenta bancaria");
       }
    }
+   public void ordenarPorCliente(){
+     for(int i=0;i<puntero-1;i++){
+        for(int j=0;j<puntero-1-i;j++){
+            if(cuentas[j].getTitular().compareToIgnoreCase(cuentas[j+1].getTitular())>0) {
+               CuentaBancaria aux=cuentas[j];     
+               cuentas[j]= cuentas[j+1];
+               cuentas[j+1]=aux; 
+            }
+        }
+     }
+  }
+  public void insertarCuenta(CuentaBancaria cuenta, int pos){
+    if(puntero<cuentas.length && pos>=0 && pos<=puntero){
+        for(int i=puntero;i>pos;i--){
+            cuentas[i]= cuentas[i-1];
+        }
+        cuentas[pos] =cuenta;
+        puntero++;
+    }else{
+       System.out.println("No se puede insertar");
+    }
+  }
 }
